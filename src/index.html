@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Generador de Listas de precios</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- barra navegacion -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cotizador</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/generadorDePrecios/index.html">Generador de precios</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- /barra navegacion -->
+
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Generador de listas de precios </div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light" id="boletas-1-2-carta">Boletas 1/2 Carta</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" id="boletas-1-4-carta">Boletas 1/4 Carta</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" id="formularios-carta">Formularios Carta</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" id="formularios-1-2-carta">Formularios 1/2 Carta</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" id="formularios-1-4-carta">Formularios 1/4 Carta</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" id="formularios-oficio">Formularios Oficio</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" id="formularios-1-2-oficio">Formularios 1/2 Oficio</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" id="formularios-1-4-oficio">Formularios 1/4 Oficio</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" id="boletas-5x1">Boletas 5x1</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" id="boletas-5x1-aut">Boletas 5x1 autocopiativas</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <div id="page-content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Ver Productos</button>  
+      </nav>
+
+      <div class="container-fluid">
+        <h1>Generador de listas de precios para clientes</h1>
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Trabajo</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Talonarios</th>
+              <th scope="col">Valor Neto</th>
+              <th scope="col">Valor con IVA</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpo-de-tabla">
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+    </script>
+
+
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAdH9dZJTjKKugwhfhaIERdzkytD2NAXpk",
+    authDomain: "appcotizador.firebaseapp.com",
+    databaseURL: "https://appcotizador.firebaseio.com",
+    projectId: "appcotizador",
+    storageBucket: "appcotizador.appspot.com",
+    messagingSenderId: "41400734898",
+    appId: "1:41400734898:web:682c4dcaab1c4ceddca5ab"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+</body>
+
+</html>
